@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yourpackage.model.PlaceImage" table="PLACEIMAGES">
+        <id name="placeImageId" column="PLACEIMAGEID">
+            <generator class="native" />
+        </id>
+        <property name="placeImageUrl" column="PLACEIMAGEURL" />
+        <property name="placeImageText" column="PLACEIMAGETEXT" />
+        <many-to-one name="place" class="com.yourpackage.model.Place" column="PLACEID" not-null="true" />
+    </class>
+</hibernate-mapping>

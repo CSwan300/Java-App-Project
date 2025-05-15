@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import required JavaFX UI components -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+Root layout container: AnchorPane
+- Provides anchor-based layout (nodes can be pinned to edges).
+- This view is controlled by the AddPlaceController.
+- Fixed preferred size set (200 height, 400 width).
+-->
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="views.AddPlaceController"
+            prefHeight="200.0" prefWidth="400.0">
+
+    <!--
+    VBox layout arranges child elements vertically with spacing of 10 units.
+    - alignment="CENTER": aligns content to the center horizontally.
+    - Anchored to top, left, and right edges of the AnchorPane by 10 units.
+    -->
+    <VBox spacing="10" alignment="CENTER"
+          AnchorPane.topAnchor="10.0"
+          AnchorPane.leftAnchor="10.0"
+          AnchorPane.rightAnchor="10.0">
+
+        <!--
+        TextField for entering the name of the place visited.
+        - fx:id is used to bind this field to the controller.
+        -->
+        <TextField fx:id="placeNameField" promptText="Place Name"/>
+
+        <!-- TextField for entering the country of the place -->
+        <TextField fx:id="countryField" promptText="Country"/>
+
+        <!-- TextField for entering the ID of the anniversary the place is linked to -->
+        <TextField fx:id="anniversaryIdField" promptText="Anniversary ID"/>
+
+        <!--
+        Button to trigger the add place action.
+        - onAction is bound to a method in the controller named handleAddPlace.
+        -->
+        <Button text="Add Place" onAction="#handleAddPlace"/>
+
+    </VBox>
+</AnchorPane>

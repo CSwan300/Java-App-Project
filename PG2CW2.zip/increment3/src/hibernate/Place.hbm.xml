@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yourpackage.model.Place" table="PLACE">
+        <id name="placeId" column="PLACEID">
+            <generator class="native" />
+        </id>
+        <property name="placeName" column="PLACENAME" />
+        <property name="country" column="COUNTRY" />
+        <many-to-one name="anniversary" class="com.yourpackage.model.Anniversary" column="ANNIVERSARYID" not-null="true" />
+        <set name="images" inverse="true" cascade="all">
+            <key column="PLACEID" />
+            <one-to-many class="com.yourpackage.model.PlaceImage" />
+        </set>
+    </class>
+</hibernate-mapping>
+
+

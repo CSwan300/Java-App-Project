@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import JavaFX components for controls and layouts -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- AnchorPane is the root layout for this view -->
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="views.AnniversaryListController">
+
+    <!-- TableView for displaying anniversaries in a tabular format -->
+    <TableView fx:id="anniversaryTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+
+        <!-- Define columns for the TableView -->
+        <columns>
+            <!-- Column for displaying the Id of the anniversary -->
+            <TableColumn fx:id="idColumn" prefWidth="50.0" text="Id"/>
+
+            <!-- Column for displaying the Modern Gift associated with the anniversary -->
+            <TableColumn fx:id="modernGiftColumn" prefWidth="150.0" text="Modern Gift"/>
+
+            <!-- Column for displaying the Traditional Gift associated with the anniversary -->
+            <TableColumn fx:id="tradGiftColumn" prefWidth="150.0" text="Traditional Gift"/>
+
+            <!-- Column for displaying the Places Visited associated with the anniversary -->
+            <TableColumn fx:id="placesColumn" prefWidth="250.0" text="Places Visited"/>
+        </columns>
+    </TableView>
+</AnchorPane>

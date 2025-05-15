@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import statements for required JavaFX UI components -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!--
+Root layout: AnchorPane
+- Sets fixed preferred size (600x400).
+- Binds the FXML to AnniversaryListController.
+-->
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="views.AnniversaryListController">
+
+    <!--
+    VBox is used to arrange children vertically with 10px spacing.
+    Anchored to all sides of the AnchorPane (fills the entire pane).
+    -->
+    <VBox spacing="10.0" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+
+        <!--
+        HBox for the top row of buttons (Add Anniversary, Add Place Visited).
+        Buttons are spaced 10px apart and padded with 10px on all sides.
+        -->
+        <HBox spacing="10.0">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <!-- Button triggers handleAddAnniversary method in the controller -->
+            <Button text="Add Anniversary" onAction="#handleAddAnniversary"/>
+
+            <!-- Button triggers handleAddPlaceVisited method in the controller -->
+            <Button text="Add Place Visited" onAction="#handleAddPlaceVisited"/>
+        </HBox>
+
+        <!--
+        TableView to display the list of anniversaries.
+        - fx:id="anniversaryTable": allows controller to interact with it.
+        - VBox.vgrow="ALWAYS": makes the table expand to fill available space in VBox.
+        -->
+        <TableView fx:id="anniversaryTable" prefHeight="400.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+            <columns>
+                <!-- Column for Anniversary ID -->
+                <TableColumn fx:id="idColumn" prefWidth="50.0" text="Id"/>
+
+                <!-- Column for modern gift -->
+                <TableColumn fx:id="modernGiftColumn" prefWidth="150.0" text="Modern Gift"/>
+
+                <!-- Column for traditional gift -->
+                <TableColumn fx:id="tradGiftColumn" prefWidth="150.0" text="Traditional Gift"/>
+
+                <!-- Column to list places visited -->
+                <TableColumn fx:id="placesColumn" prefWidth="250.0" text="Places Visited"/>
+            </columns>
+        </TableView>
+
+    </VBox>
+</AnchorPane>

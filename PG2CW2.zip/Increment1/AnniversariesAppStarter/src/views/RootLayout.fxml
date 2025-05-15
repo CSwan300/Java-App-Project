@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Importing necessary JavaFX components for layout and input controls -->
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<!-- Root layout is a BorderPane which helps in organizing the UI elements into top, bottom, left, right, and center regions -->
+<BorderPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.RootLayoutController">
+
+    <!-- The 'top' section of the BorderPane where the MenuBar is placed -->
+    <top>
+        <!-- MenuBar is placed in the center of the top region of BorderPane -->
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <!-- Menu for handling anniversaries -->
+                <Menu mnemonicParsing="false" text="Anniversaries">
+                    <items>
+                        <!-- MenuItem for listing all anniversaries -->
+                        <MenuItem mnemonicParsing="false" onAction="#handleListAnniversaries" text="Anniversaries List" />
+                        <!-- MenuItem for adding a new anniversary -->
+                        <MenuItem mnemonicParsing="false" onAction="#handleAddAnniversary" text="Add Anniversary" />
+                    </items>
+                </Menu>
+
+                <!-- Menu for exiting the application -->
+                <Menu mnemonicParsing="false" text="Exit">
+                    <items>
+                        <!-- MenuItem to quit the application -->
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Quit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

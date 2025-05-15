@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<!--
+Root layout: BorderPane
+- This layout divides the UI into five regions: top, bottom, left, right, and center.
+- Here we only use the top region to place the application's menu bar.
+- Preferred size is set to 800x400.
+- This FXML is controlled by RootLayoutController.
+-->
+<BorderPane prefHeight="400.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8.0.40"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="views.RootLayoutController">
+
+    <!-- Top region of BorderPane -->
+    <top>
+        <!-- MenuBar at the top of the application window -->
+        <MenuBar BorderPane.alignment="CENTER">
+
+            <menus>
+                <!-- "Anniversaries" menu containing app-related options -->
+                <Menu mnemonicParsing="false" text="Anniversaries">
+
+                    <items>
+                        <!-- Menu item that triggers display of the list of anniversaries -->
+                        <MenuItem mnemonicParsing="false"
+                                  onAction="#handleListAnniversaries"
+                                  text="Anniversaries List" />
+
+                        <!-- Menu item that opens the form to add a new anniversary -->
+                        <MenuItem mnemonicParsing="false"
+                                  onAction="#handleAddAnniversary"
+                                  text="Add Anniversary" />
+
+                        <!-- Menu item that opens the form to add a visited place -->
+                        <MenuItem mnemonicParsing="false"
+                                  onAction="#handleAddPlaceVisited"
+                                  text="Add Place" />
+                    </items>
+                </Menu>
+
+                <!-- New "Search by Phrase" menu for searching anniversaries -->
+                <Menu mnemonicParsing="false" text="Search">
+
+                    <items>
+                        <!-- Menu item to open search dialog for entering a phrase -->
+                        <MenuItem mnemonicParsing="false"
+                                  onAction="#handleSearchByPhrase"
+                                  text="Search by Phrase" />
+                    </items>
+                </Menu>
+
+                <!-- "Exit" menu for closing the application -->
+                <Menu mnemonicParsing="false" text="Exit">
+                    <items>
+                        <!-- Menu item that exits the application -->
+                        <MenuItem mnemonicParsing="false"
+                                  onAction="#handleExit"
+                                  text="Quit" />
+                    </items>
+                </Menu>
+            </menus>
+
+        </MenuBar>
+    </top>
+
+</BorderPane>

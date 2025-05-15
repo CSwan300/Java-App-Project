@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import necessary JavaFX UI components -->
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--
+Root layout container: AnchorPane
+- This is the main layout that allows anchoring child nodes to its edges.
+- The controller class for this view is set to AddAnniversaryController.
+- Fixed preferred height and width are specified.
+-->
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="views.AddAnniversaryController"
+            prefHeight="200.0" prefWidth="400.0">
+
+    <!--
+    VBox is used to arrange the input fields and button vertically.
+    - spacing="10": vertical spacing between children
+    - alignment="CENTER": centers children horizontally
+    - AnchorPane constraints: anchors the VBox 10 units from the top, left, and right
+    -->
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+
+        <!-- TextField for entering the modern gift -->
+        <TextField fx:id="modernGiftField" promptText="Modern Gift"/>
+
+        <!-- TextField for entering the traditional gift -->
+        <TextField fx:id="tradGiftField" promptText="Traditional Gift"/>
+
+        <!-- Button to trigger adding a new anniversary -->
+        <Button text="Add Anniversary" onAction="#handleAddAnniversary"/>
+
+    </VBox>
+
+</AnchorPane>

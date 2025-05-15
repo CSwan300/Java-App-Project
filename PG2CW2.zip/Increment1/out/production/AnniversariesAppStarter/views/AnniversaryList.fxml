@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/8.0.40"
+            fx:controller="views.AnniversaryListController">
+    <TableView fx:id="anniversaryTable" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="50.0" text="Id"/>
+            <TableColumn fx:id="modernGiftColumn" prefWidth="150.0" text="Modern Gift"/>
+            <TableColumn fx:id="tradGiftColumn" prefWidth="150.0" text="Traditional Gift"/>
+            <TableColumn fx:id="placesColumn" prefWidth="250.0" text="Places Visited"/>
+        </columns>
+    </TableView>
+</AnchorPane>
