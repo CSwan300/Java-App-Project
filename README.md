@@ -20,7 +20,7 @@ README.md – Project overview and setup guide
 ⚙️ Setup Guide
 Install Requirements
 
-Java JDK
+Java JDK (recommend amazon coretto 22)
 
 XAMPP (for MySQL & Apache)
 
