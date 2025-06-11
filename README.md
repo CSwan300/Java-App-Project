@@ -60,5 +60,6 @@ The project is for educational/demo purposes and may need further refinement for
 This project is released under the MIT License.
 
 
-Screenshots 
-Picture
+Synopsis 
+
+Was Given a partly completed aplication and told to complete sevral iterations to gradually improve the aplication 
