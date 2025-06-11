@@ -32,7 +32,7 @@ Launch XAMPP and start Apache + MySQL
 
 Open phpMyAdmin
 
-Create a new MySQL database and import any required SQL scripts
+Create a new MySQL database and import the sql scripts (for increments 1,2 the unextended)
 
 Run the Project
 
