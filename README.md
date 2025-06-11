@@ -62,4 +62,4 @@ This project is released under the MIT License.
 
 Synopsis 
 
-Was Given a partly completed aplication and told to complete sevral iterations to gradually improve the aplication 
+Was Given a partly completed aplication and told to complete sevral iterations to gradually improve the application 
